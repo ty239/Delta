@@ -1,4 +1,4 @@
-// Command server is the Sluice backend (Phase 2): it serves the types in
+// Command backend is the Sluice backend (Phase 2): it serves the types in
 // web/src/types over HTTP and computes deposit splits. Data lives in
 // memory behind the Store interface until Phase 3 adds Postgres.
 //
