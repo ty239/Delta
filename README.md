@@ -53,10 +53,10 @@ By the end of this phase the app is fully usable with fake data, and the TypeScr
 
 Go + chi (or FastAPI if Go is fighting you — decide once, don't switch midway).
 
-- [ ] Serve the Phase 1 types from real endpoints
-- [ ] Allocation engine — deposit in, expected transfers out
-- [ ] Rounding: cents must sum exactly to the deposit, no lost penny
-- [ ] Still no DB — in-memory store behind an interface
+- [x] Serve the Phase 1 types from real endpoints
+- [x] Allocation engine — deposit in, expected transfers out
+- [x] Rounding: cents must sum exactly to the deposit, no lost penny
+- [x] Still no DB — in-memory store behind an interface
 
 ### Phase 3 — Persistence
 
@@ -120,13 +120,20 @@ The actual product. Everything before this is setup.
 ## Running
 
 ```bash
-# Phase 1 — frontend only
+# Frontend (http://localhost:5173)
 cd web
 npm install
 npm run dev
 ```
 
-Backend instructions land in Phase 2.
+```bash
+# Backend (http://localhost:8080)
+cd backend
+go run .
+go test ./...
+```
+
+Endpoints, all under `/api`: `GET health`, `accounts`, `rulesets`, `deposits`, `expected-transfers`, `transactions`, `reconciliation`, and `POST deposits`. Send an `Idempotency-Key` header with `POST deposits` so retries don't record the deposit twice. Set `PORT` or `CORS_ORIGIN` to override the defaults.
 
 ---
 
