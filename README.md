@@ -38,8 +38,8 @@ The reason: the data model is easier to get right once you've built the screens 
 
 No backend. No database. No Plaid. Hardcoded JSON in the repo.
 
-- [ ] Vite + React + TypeScript, Tailwind
-- [ ] `src/mocks/` — fake accounts, deposits, rules, expected transfers
+- [x] Vite + React + TypeScript, Tailwind
+- [x] `src/mocks/` — fake accounts, deposits, rules, expected transfers
 - [ ] Rules editor — add/remove/reweight allocations, enforce 100% sum
 - [ ] Dashboard — accounts, balances, drift
 - [ ] Deposit view — "$300 landed, here's the split"
