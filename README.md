@@ -1,4 +1,3 @@
-"# Delta" 
 # Sluice
 
 Percentage-based money allocation with reconciliation.
