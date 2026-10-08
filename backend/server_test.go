@@ -35,7 +35,7 @@ func TestAllocate(t *testing.T) {
 
 func TestAllocateAlwaysSumsToAmount(t *testing.T) {
 	shares := []int64{3333, 3333, 3334}
-	for amount := int64(0); amount < 5_000; amount++ {
+	for amount := range int64(5_000) {
 		got, err := Allocate(amount, shares)
 		if err != nil {
 			t.Fatal(err)
