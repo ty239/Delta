@@ -1,0 +1,19 @@
+# Local stack: docker compose up --build
+# Site: http://localhost:3000   API: http://localhost:8080/api/health
+services:
+  backend:
+    build: ./backend
+    environment:
+      PORT: "8080"
+      CORS_ORIGIN: http://localhost:5173
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  web:
+    build: ./web
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
