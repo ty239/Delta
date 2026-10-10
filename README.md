@@ -133,7 +133,7 @@ go run .
 go test ./...
 ```
 
-Endpoints, all under `/api`: `GET health`, `accounts`, `rulesets`, `deposits`, `expected-transfers`, `transactions`, `reconciliation`, and `POST deposits`. Send an `Idempotency-Key` header with `POST deposits` so retries don't record the deposit twice. Set `PORT` or `CORS_ORIGIN` to override the defaults.
+Endpoints: `GET /api/health`. Set `PORT` to override the default.
 
 ---
 
