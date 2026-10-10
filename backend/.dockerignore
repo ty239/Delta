@@ -1,4 +1,0 @@
-*.exe
-*_test.go
-.gitignore
-Dockerfile
