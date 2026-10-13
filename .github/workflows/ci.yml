@@ -26,18 +26,18 @@ jobs:
       - run: go test -race ./...
       - run: go build ./...
 
-  web:
+  front-end:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: web
+        working-directory: front-end
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: web/package-lock.json
+          cache-dependency-path: front-end/package-lock.json
       - run: npm ci
       - run: npm run lint
       - run: npm run build

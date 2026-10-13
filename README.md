@@ -121,7 +121,7 @@ The actual product. Everything before this is setup.
 
 ```bash
 # Frontend (http://localhost:5173)
-cd web
+cd front-end
 npm install
 npm run dev
 ```
